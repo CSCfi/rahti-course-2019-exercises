@@ -1,0 +1,20 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: hello-openshift
+  name: hello-openshift
+spec:
+  replicas: 1
+  selector:
+    app: hello-openshift
+    deploymentconfig: hello-openshift
+  template:
+    metadata:
+      labels:
+        app: hello-openshift
+        deploymentconfig: hello-openshift
+    spec:
+      containers:
+      - image: openshift/hello-openshift:latest
+        name: hello-openshift

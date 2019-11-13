@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: custom-hello-pod
+spec:
+  containers:
+  - name: custom-hello
+    image: alpine:edge
+    command: ["echo", "Hello, world!"]
+  restartPolicy: OnFailure

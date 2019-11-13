@@ -1,0 +1,23 @@
+# This is created with
+# `oc run --limits='memory=50M' oom-killer \
+#    --image=docker-registry.default.svc:5000/rahti-course-2019/oom-killer:1 \
+#    --restart=Never --dry-run -o yaml > answer-run.yaml`
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: oom-killer
+  name: oom-killer
+spec:
+  containers:
+  - image: docker-registry.default.svc:5000/rahti-course-2019/oom-killer:1
+    imagePullPolicy: IfNotPresent
+    name: oom-killer
+    resources:
+      limits:
+        memory: 50M
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
