@@ -34,6 +34,8 @@ This exercise comprises of three parts:
 
     *Tip #3*: `oc create configmap ...`
     ```
+    Place the custom.json file visible in `/opt/app-root/src/config`.
+
 3.  Create a secret and use that secret to bring environment variable
     "PASSWORD=secretPassword" to the application.
 

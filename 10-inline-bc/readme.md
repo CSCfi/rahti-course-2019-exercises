@@ -55,6 +55,8 @@ $ oc --name new-app my-static-home https://github.com/<youraccount>/rahti-httpd-
 The file `scaffolding.yaml` will now contain multiple API objects in a *List*
 object.
 
+Deploy the objects in `scaffolding.yaml` if it looks okay: `oc create -f scaffolding.yaml`.
+
 The container `my-static-home` should be in a crash-loop right now. The lines
 starting with `#RUN ...` in the first Dockerfile should not have be commented
 out in the first place after all―the correct Dockerfile looks like be:

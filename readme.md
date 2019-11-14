@@ -200,6 +200,8 @@ This exercise comprises of three parts:
 
     *Tip #3*: `oc create configmap ...`
     ```
+    Place the custom.json file visible in `/opt/app-root/src/config`.
+
 3.  Create a secret and use that secret to bring environment variable
     "PASSWORD=secretPassword" to the application.
 
@@ -290,6 +292,8 @@ $ oc --name new-app my-static-home https://github.com/<youraccount>/rahti-httpd-
 
 The file `scaffolding.yaml` will now contain multiple API objects in a *List*
 object.
+
+Deploy the objects in `scaffolding.yaml` if it looks okay: `oc create -f scaffolding.yaml`.
 
 The container `my-static-home` should be in a crash-loop right now. The lines
 starting with `#RUN ...` in the first Dockerfile should not have be commented
