@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: sleeping-pod
+spec:
+  containers:
+  - name: sleeping-container
+    image: alpine:edge
+    command: ["sleep", "7200"]
+  restartPolicy: OnFailure
